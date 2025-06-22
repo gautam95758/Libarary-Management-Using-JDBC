@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Book Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Book Library Manager</h2>
+    <form id="bookForm">
+        <div class="form-group">
+            <label for="bookId">Book ID</label>
+            <input type="text" id="bookId" name="bookId" required placeholder="Enter unique book identifier">
+        </div>
+
+        <div class="form-group">
+            <label for="bookTitle">Book Title</label>
+            <input type="text" id="bookTitle" name="bookTitle" required placeholder="Enter book title">
+        </div>
+
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" required placeholder="Enter author name">
+        </div>
+
+        <div class="form-group">
+            <label for="genre">Genre</label>
+            <select id="genre" name="genre">
+                <option value="Fiction">Fiction</option>
+                <option value="Non-fiction">Non-fiction</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Biography">Biography</option>
+                <option value="Science Fiction">Science Fiction</option>
+                <option value="Romance">Romance</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Fantasy">Fantasy</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Availability</label>
+            <div class="checkbox-group" id="checkboxGroup">
+                <input type="checkbox" id="availableForLoan" name="availableForLoan">
+                <span class="checkbox-label">Available for loan</span>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Add Book to Library</button>
+    </form>
+
+    <div id="outputSection" class="output-section">
+        <div id="bookCard" class="book-card"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
